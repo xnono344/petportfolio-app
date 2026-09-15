@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "PetPortfolio",
+    "slug": "petportfolio",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "petportfolio",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.petportfolio.mobile",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "PetPortfolio needs photo access so you can save photo memories to your pet's journal.",
+        "NSCameraUsageDescription": "PetPortfolio needs camera access so you can capture photo memories for your journal.",
+        "NSLocationWhenInUseUsageDescription": "PetPortfolio can optionally save a location with journal entries."
+      }
+    },
+    "android": {
+      "package": "app.petportfolio.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFF6EE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "NOTIFICATIONS",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#E97451"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "PetPortfolio needs photo access so you can save photo memories to your pet's journal.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-location",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#FFF6EE"
+        }
+      ],
+      "expo-web-browser",
+      "expo-secure-store",
+      "expo-sharing"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
